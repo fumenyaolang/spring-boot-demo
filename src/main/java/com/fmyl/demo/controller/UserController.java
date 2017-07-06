@@ -1,7 +1,7 @@
-package com.fmyl.demo;
+package com.fmyl.demo.controller;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import com.fmyl.demo.base.BaseController;
+import com.fmyl.demo.model.User;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 //@EnableAutoConfiguration
 @RestController
 @RequestMapping("/user")
-public class UserController {
+public class UserController extends BaseController {
 
     @RequestMapping("/{id}")
     public User view(@PathVariable("id") Long id) {
@@ -24,7 +24,7 @@ public class UserController {
     }
 
     public static void main(String[] args) {
-       // SpringApplication.run(UserController.class);
+        // SpringApplication.run(UserController.class);
     }
 
 }

@@ -1,10 +1,12 @@
-package com.fmyl.demo;
+package com.fmyl.demo.model;
+
+import com.fmyl.demo.base.BaseModel;
 
 /**
  * user entity
  * Created by fuzq on 17/6/30.
  */
-public class User {
+public class User extends BaseModel {
 
     private Long id;
     private String name;
