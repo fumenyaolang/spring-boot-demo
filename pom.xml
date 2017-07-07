@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.fmyl</groupId>
-    <artifactId>sping-boot-demo</artifactId>
+    <artifactId>spring-boot-demo</artifactId>
     <packaging>jar</packaging>
     <version>0.1</version>
     <!-- Inherit defaults from Spring Boot -->
@@ -18,10 +18,20 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!-- POSTGRESQL -->
         <dependency>
-            <groupId>com.fmyl</groupId>
-            <artifactId>sping-boot-demo</artifactId>
-            <version>0.1</version>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+        </dependency>
+        <!-- Spring Boot JDBC -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+        </dependency>
+        <!-- Spring test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
     </dependencies>
 
@@ -34,7 +44,9 @@
             </plugin>
         </plugins>
     </build>
-
+    <properties>
+        <start-class>com.fmyl.demo.Application</start-class>
+    </properties>
     <!-- Allow access to Spring milestones and snapshots -->
     <!-- (you don't need this if you are using anything after 0.5.0.RELEASE) -->
     <repositories>

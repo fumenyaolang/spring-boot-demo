@@ -1,8 +1,7 @@
 package com.fmyl.demo.handers;
 
 import com.fmyl.demo.utils.DateUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.fmyl.demo.utils.LoggerUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Enumeration;
@@ -13,7 +12,7 @@ import java.util.Vector;
  */
 public class RequestLogHander {
 
-    Logger logger = LoggerFactory.getLogger(RequestLogHander.class);
+    private LoggerUtils logger = LoggerUtils.getInstance(RequestLogHander.class);
 
     private String url;
     private Vector<String> parameters;
