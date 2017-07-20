@@ -5,6 +5,7 @@ import com.fmyl.demo.handers.ServiceResultHander;
 import com.fmyl.demo.model.Page;
 import com.fmyl.demo.model.User;
 import com.fmyl.demo.service.UserService;
+import com.fmyl.demo.utils.LoggerUtils;
 import org.springframework.stereotype.Service;
 
 /**
@@ -32,5 +33,9 @@ public class UserServiceImpl  extends BaseServiceImpl implements UserService {
     @Override
     public ServiceResultHander delete(Integer id) {
         return null;
+    }
+
+    public void getLogger() {
+        LoggerUtils.getInstance(this.getClass());
     }
 }

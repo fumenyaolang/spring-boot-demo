@@ -1,6 +1,7 @@
 package com.fmyl.demo.handers;
 
 import com.fmyl.demo.utils.LoggerUtils;
+import com.fmyl.demo.utils.StackUtils;
 
 import java.util.Vector;
 
@@ -39,7 +40,7 @@ public class ServiceResultHander<T> {
     }
 
     private void outLog() {
-        LoggerUtils.getInstance().info("{},{},{},{},{}", LoggerUtils.getCaller(1), flag, size, error, result);
+        LoggerUtils.getInstance().info("{},{},{},{},{}", StackUtils.outOneStack(), flag, size, error, result);
     }
 
     public boolean isFlag() {
